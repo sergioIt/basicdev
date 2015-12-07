@@ -7,24 +7,24 @@ class m151207_152604_create_table_books extends Migration
 {
     public function up()
     {
+        echo 'creating table books';
+
+        $this->createTable('books', [
+            'id' => $this->primaryKey(10),
+            'name' => $this->string(100)->notNull(),
+            'date_create' => $this->dateTime()->notNull(),
+            'date_update' => $this->dateTime()->notNull(),
+            'date_publish' => $this->dateTime()->notNull(),
+            'author_id' => $this->integer(10)->notNull()
+        ]);
+
 
     }
 
     public function down()
     {
-        echo "m151207_152604_create_table_books cannot be reverted.\n";
-
-        return false;
+        echo 'dropping table books';
+        $this->dropTable('books');
     }
 
-    /*
-    // Use safeUp/safeDown to run migration code within a transaction
-    public function safeUp()
-    {
-    }
-
-    public function safeDown()
-    {
-    }
-    */
 }
