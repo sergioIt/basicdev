@@ -1,0 +1,6 @@
+*
+!.gitignore
+
+/vendor
+/runtime
+/web/assets
