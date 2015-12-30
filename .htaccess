@@ -1,0 +1,6 @@
+<Directory "/home/sergio/www/basic.dev">
+  Options Indexes
+  FollowSymLinks MultiViews
+  AllowOverride All
+  Require all granted
+</Directory>
