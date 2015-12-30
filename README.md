@@ -1,25 +1,14 @@
-Yii 2 Basic Project For Learning Purposes
+Yii 2 REST API
 ============================
 
-Training tasks
+HOW TO USE
 --------------
-#1 Create CRUD for model Book related with model Author (One Author can related to many books).
-Creating both tables, foreign key, fill initial data with migrations.
+#1 INSTALL necessary tables placed at products_categories.sql
+#2 USAGE 
+GET categories: http://yourdomain/index.php/categories
+GET specific categories: http://yourdomain/index.php/categories/1
+GET all categories with products http://yourdomain/index.php/categories?expand=products
+GET specific category with products http://yourdomain/index.php/categories/1?expand=products
 
-Сделать на Yii2 возможность только зарегистрированным пользователям просматривать,
-удалять, редактировать записи в таблице "books"
-|books|
-id,
-name,
-date_create, / дата создания записи
-date_update, / дата обновления записи
-preview, / путь к картинке превью книги
-date, / дата выхода книги
-author_id / ид автора в таблице авторы
+for create, update, delete action see http://budiirawan.com/setup-restful-api-yii2/
 
-|authors| 
-id,
-firstname, / имя автора
-lastname,  / фамилия автора
-
-редактирование таблицы авторов не нужно, необходимо ее просто заполнить тестовыми данными.
