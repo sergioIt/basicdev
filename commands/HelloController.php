@@ -27,4 +27,22 @@ class HelloController extends Controller
     {
         echo $message . "\n";
     }
+
+    public function actionReverse($message = 'Hello world'){
+
+        $cyrillic = preg_match('/[А-Яа-яЁё]/u', $message);
+        if($cyrillic){
+
+            echo 'please, do not use cyrillic characters at input'. "\n";
+            return false ;
+        }
+        else{
+
+            $message = preg_replace('/([aeiou])/i', '', $message);
+        }
+
+        echo strrev($message). "\n";
+
+        return true;
+    }
 }
